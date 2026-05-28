@@ -1,18 +1,8 @@
----
-runme:
-  document:
-    relativePath: README.md
-  session:
-    id: 01KSNZJQ5FD74MVG41DEFDFFZM
-    updated: 2026-05-28 10:29:56-07:00
----
-
 ```markdown
 # Resist. — Temptation Tracker
 
 Track what you want but won't buy. Watch your savings grow, log your shopping slips, and celebrate your financial discipline with interactive milestones.
 
----
 
 ## 🚀 Quick Start (Local Development)
 
@@ -58,7 +48,7 @@ npm start
 
 
 
-Once started, open your web browser and navigate to: **`ht*****************00`**
+Once started, open your web browser and navigate to: http://localhost:3000/
 
 ---
 
