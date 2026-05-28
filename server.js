@@ -137,4 +137,16 @@ app.delete('/api/items/:id', requireAuth, async (req, res) => {
 app.use(express.static(join(__dirname, 'public')));
 app.get('*', (req, res) => res.sendFile(join(__dirname, 'public', 'index.html')));
 
-app.listen(3000, () => console.log('🚀 Resist App Core Running smoothly at http://localhost:3000'));
+// app.listen(3000, () => console.log('🚀 Resist App Core Running smoothly at http://localhost:3000'));
+// ====== MODIFY THE VERY BOTTOM OF YOUR SERVER.JS ======
+
+app.use(express.static(join(__dirname, 'public')));
+app.get('*', (req, res) => res.sendFile(join(__dirname, 'public', 'index.html')));
+
+// Only bind the server port if this file is run directly (not required by test scripts)
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`🚀 Resist App Core Running smoothly at http://localhost:3000`));
+}
+
+export default app; // Export app instance cleanly for testing frameworks
